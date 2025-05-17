@@ -1,0 +1,12 @@
+{
+  "name": "hn-slack-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Saahil <neon@saahild.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@slack/bolt": "^4.3.0",
+    "boltjs": "^1.6.2-12",
+    "quick.db": "^9.1.7"
+  }
+}
