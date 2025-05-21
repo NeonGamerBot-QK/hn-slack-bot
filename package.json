@@ -6,6 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "@slack/bolt": "^4.3.0",
+    "better-sqlite3": "^11.10.0",
     "boltjs": "^1.6.2-12",
     "quick.db": "^9.1.7"
   }
