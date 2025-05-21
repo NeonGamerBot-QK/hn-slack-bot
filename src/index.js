@@ -42,5 +42,32 @@ if (ack) ack()
         ephemeral: true,
     });
 })
-
+app.event("app_home_opened", async ({ event, context, say }) => {
+await app.client.views.publish({
+    user_id: event.user,
+    view: {
+        type: 'home',
+        callback_id: 'home_view',
+        blocks: [
+            {
+                type: 'section',
+                text: {
+                    type: 'mrkdwn',
+                    text: `Welcome to the HN Slack Bot!`,
+                },
+            },
+            {
+                type: 'divider',
+            },
+            {
+                type: 'section',
+                text: {
+                    type: 'mrkdwn',
+                    text: `Use /hn-subscribe <id> <channel> to subscribe to a story. Use /hn-unsubscribe <id> <channel> to unsubscribe.`,
+                },
+            },
+        ],
+    },
+})
+})
 app.start()
