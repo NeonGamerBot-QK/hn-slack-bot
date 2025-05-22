@@ -11,7 +11,7 @@ const app = new App({
   socketMode: true,
   //    logLevel: 'debug',
 });
-db.all().then(e=>console.log(e[0]))
+db.all().then((e) => console.log(e[0]));
 
 app.command("/hn-subscribe", async ({ ack, body, client, context, say }) => {
   if (ack) ack();
