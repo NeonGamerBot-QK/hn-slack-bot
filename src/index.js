@@ -7,11 +7,8 @@ const db = new QuickDB();
 const app = new App({
   token: process.env.SLACK_BOT_TOKEN,
   appToken: process.env.SLACK_APP_TOKEN,
-  // signingSecret: process.env.SLACK_SIGNING_SECRET,
   socketMode: true,
-  //    logLevel: 'debug',
 });
-// db.all().then((e) => console.log(e[0]));
 
 app.event("app_home_opened", async ({ event, context, say }) => {
   await app.client.views.publish({
@@ -42,4 +39,5 @@ app.event("app_home_opened", async ({ event, context, say }) => {
   });
 });
 require("./cmds")(app, db);
+require("./stalker").stalkerCron(app, db);
 app.start();
