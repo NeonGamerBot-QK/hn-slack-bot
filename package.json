@@ -8,6 +8,7 @@
     "@slack/bolt": "^4.3.0",
     "better-sqlite3": "^11.10.0",
     "boltjs": "^1.6.2-12",
+    "dotenv": "^16.5.0",
     "quick.db": "^9.1.7"
   }
 }
